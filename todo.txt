@@ -1,0 +1,5 @@
+for my mod:
+After the liquifier i want a crystilyzer, which turns the just created liquids into crystals
+The crystals should be able to be crushed into chunks, which then can be crushed into dust.
+after which they can be combined with water.
+Which then forms a compound that can be melted into the original plate

@@ -1,0 +1,26 @@
+User-added custom colors are supported on the Map tab of the Mod Settings.
+Simply copy a table of the following format and paste into the "Input custom colors" setting field:
+
+    {
+    ['item1']={r=000,g=000,b=000,a=000},
+    ['item2']={r=255,g=255,b=255,a=255},
+    }
+
+While there are several checks to prevent improper inputs from crashing the game, edge cases may exist. Please ensure the table conforms to the following rules:
+- {Curly brackets} must be included at the start and end.
+- Spaces, line breaks, and paragraphs are ignored. A vertically-arranged table like above will paste correctly into the single-line setting field.
+- Each item name comes from the object's internal name. These can be found on the Factorio wiki (https://wiki.factorio.com/Data.raw), or in a mod's prototype and locale files. They must contain only alphanumeric characters, "-" or "_", and must be enclosed in both 'single quotes' and [square brackets].
+- Each row must have values for all of r, g, b, and a, each separated by commas, and be wholly enclosed within another set of curly brackets, followed by a comma.
+- "r", "g", "b", and "a" values must be between 0 and 255, inclusive. Please avoid using decimal values from 0 to 1; they will return a black color.
+- Note: there is no practical limit to the number of rows that can be added.
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+Example:
+
+    {
+    ['iron-ore']={r=000,g=000,b=255,a=127},
+    ['copper-ore']={r=255,g=000,b=000,a=127},
+    }
+
+This will turn iron ore carrying trains blue, and copper ore carrying trains red.
